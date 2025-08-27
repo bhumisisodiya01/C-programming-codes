@@ -1,0 +1,13 @@
+// Write a program to convert the given number of days into years months and days format
+#include <stdio.h>
+int main()
+{
+    int a, y, m, d ;
+    printf ("Enter no. of days: \n");
+    scanf ("%d", &a);
+    y=a/360;
+    m=(a-(y*360))/30;
+    d=a-(y*360+m*30);
+    printf("Years=%d, Months=%d, Days=%d\n", y,m,d);
+    return 0;
+}
