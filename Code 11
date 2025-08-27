@@ -1,0 +1,23 @@
+// Write a program to check the use of relational operators by giving a comparison between 2 values x and y (use input).
+#include <stdio.h>
+int main()
+{
+    int x, y, r1, r2, r3, r4, r5, r6 ;
+    printf ("Enter the value of x \n");
+    scanf ("%d", &x);
+    printf ("Enter the value of y\n");
+    scanf ("%d", &y);
+    r1=x>=y;
+    r2=x<=y;
+    r3=x>y;
+    r4=x<y;
+    r5=x==y;
+    r6=x!=y;
+    printf("Operation : x>=y, value =%d\n",r1);
+    printf("Operation : x<=y, value =%d\n",r2);
+    printf("Operation : x>y, value =%d\n",r3);
+    printf("Operation : x<y, value =%d\n",r4);
+    printf("Operation : x==y, value =%d\n",r5);
+    printf("Operation : x!=y, value =%d\n",r6);
+    return 0;
+}
