@@ -1,0 +1,8 @@
+// Write a program to print your address in multiple lines
+#include <stdio.h>
+int main()
+{
+    printf ("UPES \n");
+    printf ("Dehradun");
+    return 0;
+}
