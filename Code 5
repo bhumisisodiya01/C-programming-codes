@@ -1,0 +1,28 @@
+// Write a program to perform the following operations and print the results
+i. a*b*c
+ii. a+b+c
+iii. a-b-c
+iv. (a+b)*c
+v. a/b
+#include <stdio.h>
+int main()
+{
+    int a,b,c , sum, product, difference, quotient, x;
+    printf ("Enter the value of a \n");
+    scanf ("%d", &a);
+    printf ("Enter the value of b\n");
+    scanf ("%d", &b);
+    printf ("Enter the value of c\n");
+    scanf ("%d", &c);
+    sum=a+b+c;
+    printf("%d+%d+%d=%d\n", a, b, c, sum);
+    product=a*b*c;
+    printf("%d*%d*%d=%d\n", a, b, c, product);
+    difference=a-b-c;
+    printf("%d-%d-%d=%d\n", a, b, c, difference);
+    x=(a+b)*c;
+    printf("(%d+%d)*%d=%d\n", a, b, c, x);
+    quotient=a/b;
+    printf("%d/%d=%d\n", a, b, quotient);
+    return 0;
+}
