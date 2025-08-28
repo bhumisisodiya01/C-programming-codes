@@ -1,0 +1,29 @@
+//Write a program to check if a given triangle is valid or not, if the validity is established check if the triangle is isosceles, equilateral or scalene.
+#include <stdio.h>
+int main()
+{
+    int S1, S2 ,S3 ;
+    printf ("Enter the value of Side 1\n");
+    scanf ("%d", &S1);
+    printf ("Enter the value of Side 2\n");
+    scanf ("%d", &S2);
+    printf ("Enter the value of Side 3\n");
+    scanf ("%d", &S3);
+    if (((S1+S2)>S3)&&((S2+S3)>S1)&&((S1+S3)>S2))
+    {
+        printf("Triangle is valid and ");
+        if((S1==S2)&&(S2==S3))
+        {
+            printf("it is Equilateral");
+        }
+        else if ((S1==S2) || (S2==S3) || (S3==S1)){
+        printf("it is isosceles");}
+    else{
+        printf("it is scalene");
+        }
+    }
+    else{
+        printf("Triangle is invalid");
+    }
+    return 0;
+}
