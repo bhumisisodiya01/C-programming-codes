@@ -1,0 +1,38 @@
+//According to the calendar it was monday on 01/01/01 if any year is input through the key board wap to find out what is the day on 1st january of this year.
+#include <stdio.h>
+int main() {
+    int y, l=0, year, days=0, day_index ;
+    printf("Enter the year: ");
+    scanf("%d", &year);
+    for(y=1; y<year; y++)
+    {
+        l=(y%4==0 && y%100!=0) || (y%400==0);
+        days=days+(l==1)? 366:365;
+    }
+    day_index=(days+1)%7;
+    switch(day_index)
+    {
+        case 0:
+        printf("1st January of year %d is a Sunday.\n", year);
+        break;
+        case 1:
+        printf("1st January of year %d is a Monday.\n", year);
+        break;
+        case 2:
+        printf("1st January of year %d is a Tuesday.\n", year);
+        break;
+        case 3:
+        printf("1st January of year %d is a Wednesday.\n", year);
+        break;
+        case 4:
+        printf("1st January of year %d is a Thursday.\n", year);
+        break;
+        case 5:
+        printf("1st January of year %d is a Friday.\n", year);
+        break;
+        case 6:
+        printf("1st January of year %d is a Saturday.\n", year);
+        break;
+    }
+    return 0;
+}
