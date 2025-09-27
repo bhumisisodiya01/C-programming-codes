@@ -1,0 +1,129 @@
+//Write a program to print the following patterns
+A. *
+   **
+   ***
+   ****
+   *****
+//Input A
+#include <stdio.h>
+int main() {
+   int i, j ;
+   for (i=1;i<=5;i++)
+   {
+       for(j=1;j<=i;j++)
+       {
+          printf("*");
+       }
+   printf("\n");
+   }
+    return 0;
+}
+
+
+// B. 1
+      12
+      123
+      1234
+      12345
+//Input B
+#include <stdio.h>
+int main() {
+   int i, j ;
+   for (i=1;i<=5;i++)
+   {
+       for(j=1;j<=i;j++)
+       {
+          printf("%d", j);
+       }
+   printf("\n");
+   }
+    return 0;
+}
+
+
+// C. 1
+      22
+      333
+      4444
+      55555
+//Input C
+#include <stdio.h>
+int main() {
+   int i, j ;
+   for (i=1;i<=5;i++)
+   {
+       for(j=1;j<=i;j++)
+       {
+          printf("%d", i);
+       }
+   printf("\n");
+   }
+    return 0;
+}
+
+
+//D. 1
+     23
+     456
+     78910
+// Input D
+#include <stdio.h>
+int main() {
+   int i, j, num=1 ;
+   for (i=1;i<=4;i++)
+   {
+       for(j=1;j<=i;j++)
+       {
+          printf("%d", num);
+          num++;
+       }
+   printf("\n");
+   }
+    return 0;
+}
+
+
+//E. 54321
+     4321
+     321
+     21
+     1
+//Input E
+#include <stdio.h>
+int main() {
+    int i, j;
+    for (i = 5; i >= 1; i--)
+    {
+        for (j = i; j >= 1; j--)
+        {
+            printf("%d", j);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+//F.  *
+     ***
+    *****
+   *******
+//Input F
+#include <stdio.h>
+int main() {
+    int i, j, space;
+    int rows = 4;
+    for (i = 1; i <= rows; i++)
+    {
+        for (space = 1; space <= rows - i; space++)
+        {
+            printf(" ");
+        }
+        for (j = 1; j <= 2 * i - 1; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
