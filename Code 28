@@ -1,0 +1,29 @@
+//Declare variables within different code blocks (enclosed by curly braces) and test their accessibility within and outside those blocks.
+#include <stdio.h>
+int main()
+{
+ int x = 10; // Global to main()
+ printf("x in main: %d\n", x); // Accessible here
+ {
+ int y = 20;
+ printf("Inside Block 1:\n");
+ printf("x = %d\n", x); // Accessible (from outer block)
+ printf("y = %d\n", y); // Accessible (declared here)
+ }
+ // printf("y = %d\n", y); // Error: y is not declared in this scope
+ {
+ int z = 30;
+ printf("Inside Block 2:\n");
+ printf("x = %d\n", x); // Accessible
+ printf("z = %d\n", z); // Accessible
+ }
+ // printf("z = %d\n", z); // Error: z is not declared in this scope
+ {
+ int x = 100; // Local to this block, shadows outer x
+ printf("Inside Block 3 (x is re-declared):\n");
+ printf("x = %d\n", x); // Prints 100
+ }
+ printf("Back in main:\n");
+ printf("x = %d\n", x); // Still prints 10 — outer x was not changed
+ return 0;
+} 
